@@ -1,4 +1,4 @@
-# 🛡️ PII Redaction & Anonymization Tool
+#  PII Redaction & Anonymization Tool
 
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -19,7 +19,7 @@ The tool detects sensitive PII, replaces it with realistic synthetic alternative
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 ├── evaluation/
@@ -47,7 +47,7 @@ The tool detects sensitive PII, replaces it with realistic synthetic alternative
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 1. **Clone the repository:**
    ```bash
@@ -74,7 +74,7 @@ The tool detects sensitive PII, replaces it with realistic synthetic alternative
 
 ---
 
-## 💻 Usage
+##  Usage
 
 ### 1. Run Anonymization Pipeline
 ```bash
@@ -85,7 +85,7 @@ python -m src.main --input input/RHP.docx --output output/Red_Herring_Prospectus
 python scripts/run_anonymization.py
 ```
 
-> ⏱️ **Note on Processing & Writing Time:**  
+>  **Note on Processing & Writing Time:**  
 > Large financial filings like `RHP.docx` contain over 4,200 text blocks, 76 complex tables, headers, and footers. The pipeline executes a comprehensive 4-tier NLP ensemble and performs granular **run-level XML style reconstruction** (multi-run stitching, right-to-left slice substitutions, and a global consistency sweep). Consequently, processing and writing the redacted document typically takes **30–60 seconds**. Please allow the command to run until completion.
 
 ### 2. Validate Redaction & Document Structure
@@ -112,7 +112,7 @@ pytest -v
 
 ---
 
-## 🌐 1-Click Cloud Deployment (Fastest Options)
+##  1-Click Cloud Deployment (Fastest Options)
 
 ### Option A: Streamlit Community Cloud (Fastest - Recommended)
 1. Go to **[share.streamlit.io](https://share.streamlit.io/)** and sign in with GitHub.
@@ -129,21 +129,21 @@ This repository includes `vercel.json` and a serverless API at `api/index.py`:
 
 ---
 
-## 📊 Evaluation & Metrics
+##  Evaluation & Metrics
 
 Detailed quantitative metrics (Precision, Recall, F1 scores across all 9 categories), false positive/negative analysis, and structural integrity validations are documented in:
 
-👉 **[Evaluation Report (evaluation/evaluation_report.md)](evaluation/evaluation_report.md)**
+ **[Evaluation Report (evaluation/evaluation_report.md)](evaluation/evaluation_report.md)**
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
-**Priyanjal Goyal**  
+**Pranjal Goyal**  
 Enterprise PII Redaction & Anonymization Engine
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
