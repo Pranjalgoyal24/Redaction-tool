@@ -19,7 +19,18 @@ class SpacyDetector:
         self,
         model_name: str = "en_core_web_lg",
     ):
-        self.nlp = spacy.load(model_name)
+        try:
+            self.nlp = spacy.load(model_name)
+        except OSError:
+            try:
+                self.nlp = spacy.load("en_core_web_sm")
+            except OSError:
+                import spacy.cli
+                try:
+                    spacy.cli.download("en_core_web_sm")
+                    self.nlp = spacy.load("en_core_web_sm")
+                except Exception:
+                    self.nlp = spacy.blank("en")
 
     def detect(
         self,
