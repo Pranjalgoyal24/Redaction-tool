@@ -1,4 +1,5 @@
 import spacy
+import spacy.cli
 
 from src.models import PIIEntity
 
@@ -25,7 +26,6 @@ class SpacyDetector:
             try:
                 self.nlp = spacy.load("en_core_web_sm")
             except OSError:
-                import spacy.cli
                 try:
                     spacy.cli.download("en_core_web_sm")
                     self.nlp = spacy.load("en_core_web_sm")
